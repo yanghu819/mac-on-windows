@@ -1,0 +1,13 @@
+# build output
+windows/three-finger-drag/src/*.exe
+*.exe
+*.pdb
+
+# runtime logs / user config
+tfd.log
+*.log
+
+# os junk
+Thumbs.db
+desktop.ini
+.DS_Store
