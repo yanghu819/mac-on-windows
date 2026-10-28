@@ -70,6 +70,20 @@ powershell -ExecutionPolicy Bypass -File windows\scripts\install-tools.ps1
 
 ---
 
+### 4. 作为 Agent Skill 使用
+
+`skill/mac-on-windows/` 是一个标准技能包（`SKILL.md` + `references/`），任何支持 skills 的 Agent 都能直接加载：
+
+```powershell
+# DeepSeek Harness
+Copy-Item -Recurse skill\mac-on-windows "$env:USERPROFILE\.dsh\skills\"
+# Claude Code 等：复制到 ~/.claude/skills/
+```
+
+之后对 Agent 说「苹果键盘和妙控板插在 Windows 上了，帮我配成 Mac 手感」即可触发这套流程。
+
+---
+
 ## 仓库结构
 
 ```
